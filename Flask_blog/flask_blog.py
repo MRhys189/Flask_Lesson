@@ -4,9 +4,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return "<h1>Home page</h1>"
+    return "Hello, World!.. it is nice to see you"
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
 # commit
