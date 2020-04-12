@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    {{% if title%}}
-        <title>Flask Blog - {{ title }}</title>
-    {{% else %}}   
-        <title>Flask Blog</title>
-        {% endif %}
-</head>
+{% extends "layout.html" %}
+{% block content %}
 
 <body>
     {% for post in posts%}
@@ -16,7 +8,8 @@
     <p1>{{ post.content }}</p1>
     {%endfor%}
     
-    <h1>Home page</h1>
+    {% endblock content %}
+
 </body>
 
 </html>
