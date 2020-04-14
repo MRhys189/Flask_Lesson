@@ -1,6 +1,11 @@
 from flask import Flask, render_template, url_for
+from forms import RegistrationForm, LoginForm
+from flask_sqlalchemy import SQLAlchemy
+
 app = Flask(__name__)
 
+app.config['SECRET KEY'] = '41ecc1788dbebaa1eccb8ce56834d0b3'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 posts = [
     {
         "author": "Rhys Murage",
@@ -33,6 +38,12 @@ def home2():
 @app.route('/about')
 def about():
     return render_template("about.html", title=about)
+
+
+@app.route('/register')
+def register():
+    form = RegistrationForm()
+    return render_template("register.html", title="Register", form=form)
 
 
 if __name__ == '__main__':
