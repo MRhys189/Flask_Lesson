@@ -1,3 +1,4 @@
+import sys
 movies_watched = {"The Matrix", "Avatar", "Her"}
 movie_a_watched = "The Matrix"
 
@@ -130,7 +131,6 @@ print(username_mapping["Bob"])
 #     print("Your details are incorrect")
 # enumerate(username_mapping, 1)
 
-
 names = [
     (0, "Rhys", "wakawaka"),
     (1, "James", "coolkid234"),
@@ -139,4 +139,6 @@ names = [
 print(names)
 
 obj1 = enumerate(names)
-print(list(obj1))
+print(sys.path)
+
+
